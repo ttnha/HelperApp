@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/bg_rd_default"
+    android:button="@android:color/transparent"
+    android:clickable="true"
+    android:drawableStart="@drawable/ic_sharp_add_circle_24"
+    android:drawablePadding="5dp"
+    android:drawableTint="@color/teal_700"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="9dp"
+    android:text="@string/them"
+    android:textSize="15sp"
+    android:textStyle="bold" />

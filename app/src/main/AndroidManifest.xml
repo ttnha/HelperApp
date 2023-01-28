@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.helper">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <application
+        android:name=".MyApplication.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HelperApp">
+        <activity android:name=".Views.Guardian.LocationPlaceWarningActivity" />
+        <activity android:name=".Views.Followed.FamiliarPlaceMapActivity" />
+        <activity android:name=".Views.Followed.FamiliarPlaceActivity" />
+        <activity android:name=".Views.Followed.GlobalMapActivity" />
+        <activity android:name=".Views.Followed.HistoryMoveActivity" />
+        <activity android:name=".Views.Followed.FollowActivity" />
+        <activity
+            android:name=".Views.Main.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Views.Guardian.RescuerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".Views.Guardian.ConfirmCodeActivity" />
+        <activity android:name=".Views.Guardian.GuardiansActivity" />
+        <activity android:name=".Views.Security.LoginPwdActivity" />
+        <activity android:name=".Views.Security.RegisterActivity" />
+        <activity android:name=".Views.Security.OTPActivity" />
+        <activity android:name=".Views.Security.LoginActivity" />
+        <activity android:name=".Views.Main.MainActivity" />
+
+        <service
+            android:name=".Notification.Service.NotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".Location.Commons.Broadcasts.LocationBroadcast">
+            <intent-filter>
+                <action android:name="com.app.helper.Location.Commons.Broadcasts.LocationBroadcast.ACTION_PROCESS_UPDATES" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Location.Commons.Broadcasts.AlarmBroadcast" />
+        <receiver android:name=".Location.Commons.Broadcasts.NotificationCancelBroadcast" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+    </application>
+
+</manifest>

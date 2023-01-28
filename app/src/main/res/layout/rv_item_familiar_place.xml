@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zerobranch.layout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="111dp"
+    android:layout_marginBottom="2dp"
+    app:draggedItem="@id/rl_main"
+    app:leftItem="@id/ll_more"
+    app:swipeDirection="right">
+
+    <RelativeLayout
+        android:id="@+id/ll_more"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white"
+        android:backgroundTint="@color/yellow">
+
+        <TextView
+            android:id="@+id/tv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/sw_notification"
+            android:layout_marginHorizontal="5dp"
+            android:text="Thông báo"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sw_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/tv_22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_11"
+            android:layout_alignBaseline="@+id/sw_interval"
+            android:layout_marginStart="5dp"
+            android:text="Lặp lại"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sw_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@id/sw_notification"
+            android:layout_alignParentEnd="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_remove"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/sw_interval"
+            android:layout_marginTop="5dp"
+            android:background="@color/red"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xoa"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_delete_24" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa điểm"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/srv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tv_2"
+            android:scrollbarSize="1dp">
+
+            <TextView
+                android:id="@+id/tv_place_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_place_date"
+            android:text="Thời gian"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_place_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/srv"
+            android:layout_toEndOf="@id/tv_2" />
+
+        <TextView
+            android:id="@+id/tv_place_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_place_date"
+            android:layout_toEndOf="@id/tv_2" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_place_date_time"
+            android:text="Lặp lại"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_3"
+            android:layout_toEndOf="@id/tv_2" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_interval"
+            android:text="Bán kính"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_4"
+            android:layout_toEndOf="@+id/tv_2" />
+
+
+    </RelativeLayout>
+
+</com.zerobranch.layout.SwipeLayout>

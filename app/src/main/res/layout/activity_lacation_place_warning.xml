@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0710202"
+    android:paddingHorizontal="15dp"
+    tools:context=".Views.Guardian.LocationPlaceWarningActivity">
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="THÔNG BÁO\nĐỊA ĐIỂM QUEN THUỘC"
+        android:textAlignment="center"
+        android:textColor="#EDEDED"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#EDEDED"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#EDEDED"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/cpi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="30"
+            app:indicatorColor="@color/yellow"
+            app:indicatorSize="160dp"
+            app:trackColor="#EDEDED"
+            app:trackCornerRadius="20dp"
+            app:trackThickness="6dp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/yellow"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:showAnimationBehavior="inward" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:onClick="finish"
+        android:id="@+id/rl_btn"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        tools:ignore="OnClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Xác nhận"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

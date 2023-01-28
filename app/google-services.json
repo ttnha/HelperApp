@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "480862538169",
+    "firebase_url": "https://helperapp-9999-default-rtdb.firebaseio.com",
+    "project_id": "helperapp-9999",
+    "storage_bucket": "helperapp-9999.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480862538169:android:841c8e847d469921440e68",
+        "android_client_info": {
+          "package_name": "com.app.helper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480862538169-17nr42jnpd1hgqfv1gsecu3e7904la2o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.helper",
+            "certificate_hash": "8504d7227eed5fee77a37d45c6608bdf8ff0b613"
+          }
+        },
+        {
+          "client_id": "480862538169-no781fqfiv5erdutv3fgacf0rdrlhso6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.helper",
+            "certificate_hash": "23c689ba17cf4b7e6c1b2d1b9e2a4d4e9229e44c"
+          }
+        },
+        {
+          "client_id": "480862538169-4q4qs3h42u7g872dkgfe226rvcusljlu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmIZXA9wT0t08thaqixfrrqiFKdjgXKh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480862538169-4q4qs3h42u7g872dkgfe226rvcusljlu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480862538169:android:e19e671e4a8b4222440e68",
+        "android_client_info": {
+          "package_name": "com.helper.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480862538169-vtai1u9lpt23eio0sj2m2b1apofmtg8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.helper.app",
+            "certificate_hash": "8504d7227eed5fee77a37d45c6608bdf8ff0b613"
+          }
+        },
+        {
+          "client_id": "480862538169-4q4qs3h42u7g872dkgfe226rvcusljlu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmIZXA9wT0t08thaqixfrrqiFKdjgXKh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480862538169-4q4qs3h42u7g872dkgfe226rvcusljlu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

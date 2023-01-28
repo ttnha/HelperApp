@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="35dp"
+    android:paddingVertical="20dp"
+    tools:context=".Views.Security.LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Helper App"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/yellow"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:text="Nhập số điện thoại"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dùng số điện thoại để đăng ký hoặc\nđăng nhập vào ứng dụng"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/yellow_light">
+
+        <View
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/ic_baseline_phone_24"
+            android:backgroundTint="#FF5722"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:background="@drawable/bg_et"
+            android:hint="@string/so_dien_thoai"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingVertical="12dp"
+            android:textAlignment="center"
+            android:textColor="#6C6C6C"
+            android:textColorHint="#6C6C6C"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TextFields" />
+
+        <View
+            android:id="@+id/clear_phone"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_sharp_add_circle_24"
+            android:backgroundTint="@color/red"
+            android:padding="15dp"
+            android:rotation="45"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/non_empty"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_circle"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/tiep_tuc"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</LinearLayout>
